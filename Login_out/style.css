@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;         /*  giúp bao gồm padding và border vào tổng chiều rộng và chiều cao của phần tử */
+}
+
+body {
+    background: linear-gradient(135deg, #00c3ff, #ffff1c);
+    min-height: 100vh;              /* chiều cao tối thiểu để không bị co lại khi nội dung quá ít, 1vh = 1% chiều cao của viewport */
+    display: flex;
+    justify-content: center;        /* căn giữa ngang */
+    align-items: center;            /* căn giữa dọc */
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.form-section {
+    display: block;
+}
+
+.form-section.hidden {
+    display: none;
+}
+
+h2 {
+    color: #111;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #999;
+}
+
+.login-button {
+    width: 100%;
+    padding: 14px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-button:hover {
+    background: #5a6fd6;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 16px;
+    color: #444;
+}
+
+.login-link a {
+    color: #405ee6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: none;
+    color: #0e2ebb;
+}
+
+/* Responsive Design
+@media (max-width: 480px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .input-group input {
+        padding: 10px 12px;
+    }
+
+    .login-button {
+        padding: 12px;
+    }
+} */

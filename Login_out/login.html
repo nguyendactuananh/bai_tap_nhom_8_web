@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Đăng nhập - Học viện Star</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- Form Đăng nhập -->
+            <div class="form-section" id="login-form">
+                <h2>Đăng nhập</h2>
+                <form action="login.php" method="post" onsubmit="return login(event)">
+                    <div class="input-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" name="login-email" id="login-email" required placeholder="ducanhdz@gmail.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Mật khẩu</label>
+                        <input type="password" name="password" id="password" required placeholder="Nhập mật khẩu">
+                    </div>
+                    <button type="submit" class="login-button">Đăng nhập</button>
+                </form>              
+                <p class="login-link"><a href="#" onclick="chuyendoiForm('forgot_password')">Quên mật khẩu</a></p>
+                <p class="login-link">Bạn chưa có tài khoản? <a href="#" onclick="chuyendoiForm('register')">Đăng ký ngay</a></p>
+            </div>
+
+            <!-- Form Đăng ký -->
+            <div class="form-section hidden" id="register-form">
+                <h2>Đăng ký</h2>
+                <form action="register.php" method="post" onsubmit="return register(event)">
+                    <div class="input-group">
+                        <label for="register-name">Họ và tên</label>
+                        <input type="text" name="register-name" id="register-name" required placeholder="Nhập đầy đủ họ tên">
+                    </div>
+                    <div class="input-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" name="register-email" id="register-email" required placeholder="ducanhdz@gmail.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="register-password">Mật khẩu</label>
+                        <input type="password" name="register-password" id="register-password" required placeholder="Nhập mật khẩu">
+                    </div>
+                    <div class="input-group">
+                        <label for="register-confirm-password">Xác nhận Mật khẩu</label>
+                        <input type="password" name="register-confirm-password" id="register-confirm-password" required placeholder="Xác nhận mật khẩu">
+                    </div>
+                    <div class="input-group">
+                        <label for="register-otp">Mã xác nhận tài khoản</label>
+                        <input type="password" name="register-otp" id="register-otp" required placeholder="Nhập mã xác nhận">
+                    </div>
+                    <div class="input-group">
+                        <label for="register-confirm-otp">Nhập lại Mã xác nhận </label>
+                        <input type="password" name="register-confirm-otp" id="register-confirm-password" required placeholder="Xác nhận mã xác nhận">
+                    </div>
+                    <button type="submit" class="login-button">Tạo tài khoản</button>
+                </form>
+                <p class="login-link">Đã có tài khoản? <a href="#" onclick="chuyendoiForm('login')">Đăng nhập</a></p>
+           </div>
+
+           <!-- Form Quên mật khẩu -->
+            <div class="form-section hidden" id="forgotPass-form">
+                <h2>Quên mật khẩu</h2>
+                <form action="forgotPass.php" method="post" onsubmit="return forgotPass(event)">
+                    <div class="input-group">
+                        <label for="forgot-email">Email</label>
+                        <input type="email" name="forgot-email" id="forgot-email" required placeholder="ducanhdz@gmail.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="otp">Mã xác nhận tài khoản</label>
+                        <input type="password" name="otp" id="otp" required placeholder="Nhập mã xác nhận">
+                    </div>
+                    <div class="input-group">
+                        <label for="forgot-password">Mật khẩu mới</label>
+                        <input type="password" name="forgot-password" id="forgot-password" required placeholder="Nhập mật khẩu mới">
+                    </div>
+                    <div class="input-group">
+                        <label for="forgot-confirm-password">Xác nhận Mật khẩu</label>
+                        <input type="password" name="forgot-confirm-password" id="forgot-confirm-password" required placeholder="Xác nhận mật khẩu">
+                    </div>
+                    <button type="submit" class="login-button">Xác nhận</button>
+                </form>                
+                <p class="login-link">Bạn chưa có tài khoản?<a href="#" onclick="chuyendoiForm('register')">Đăng ký ngay</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
