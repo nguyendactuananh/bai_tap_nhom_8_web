@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang giới thiệu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #b2eaff;
+    }
+
+    nav {
+        background-color: #f2f2f2;
+        padding: 12px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: -7px;
+        margin-top: -8px;
+        margin-bottom: -8px;
+    }
+
+    nav a {
+        margin: 0 12px;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .div_nav {
+        margin: 0 12px;
+        text-decoration: none;
+        color: #333;
+        display: flex;
+        align-items: center;
+    }
+
+    .div_nav:hover {
+        background: linear-gradient(135deg, #00c3ff, #ffff1c);
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .container_nav {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+    }
+
+    .input_search {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;
+        margin-right: 10px;
+        width: 200px;
+        height: 100%;
+    }
+
+    .img_gioithieu {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        border-radius: 20px;
+        border: 2px solid #0011ff;
+    }
+
+    .container_menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .object_menu {
+        width: 250px;
+        background-color: #f2f2f2;
+        padding: 12px;
+        border-radius: 20px;
+        border: 1px solid #ccff00;
+        height: 300px;
+        margin: 12px;
+    }
+
+    .img_menu {
+        padding-top: 20px;
+        display: block;
+        width: 100%;
+        border-radius: 20px;
+        height: 80%;
+    }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <p style="font-weight: bold; color:rgba(255, 166, 0, 0.977);">Nhóm 8</p>
+        <div class="container_nav">
+            <div class="div_nav">
+                <i class="fa fa-sign-in" aria-hidden="true"></i>
+                <a href="login.php">Đăng nhập để sử dụng dịch vụ của chúng tôi</a>
+            </div>
+        </div>
+    </nav>
+    <div style="padding-bottom: 50px;">
+        <h1 style="text-align: center;color: #333333;padding:10px 100px ;">Học một ngôn ngữ mới là mở ra một thế giới
+            mới</h1>
+        <img class="img_gioithieu" src="img/english-british-england-language-education-concept-2048x1369.jpg" alt="">
+    </div>
+    <div style="padding-bottom:50px ;">
+        <div style="text-align: center;color: #333333;padding:10px 100px ;">
+            <h1>Giáo dục cho mọi độ tuổi</h1>
+            <p>Học ngôn ngữ là hành trình mở ra một thế giới mới, nơi mỗi từ vựng và câu nói đều là một cánh cửa dẫn đến
+                những tri thức, văn hóa và cách nhìn khác nhau. Với mô hình tự học thông minh, trẻ em có thể tiếp cận và
+                khám phá ngôn ngữ một cách tự nhiên, không cần phụ huynh kèm cặp, từ đó hình thành tư duy độc lập và
+                niềm đam mê học tập ngay từ những bước đầu tiên.</p>
+        </div>
+        <div>
+            <div class="container_menu">
+                <div class="object_menu">
+                    <b>Tiếng anh toàn diện theo chuẩn Cambridge</b>
+                    <img class="img_menu" width="200px" src="img/university-of-cambridge-logo-png_seeklogo-310247.png"
+                        alt="">
+                </div>
+                <div class="object_menu">
+                    <b>Tiếng Anh Tăng Cường giao tiếp cho trẻ em</b>
+                    <img class="img_menu" width="200px" src="img/pexels-cottonbro-9656168.jpg" alt="">
+                </div>
+                <div class="object_menu">
+                    <b>Tiếng Anh tăng cường điểm số tại trường học</b>
+                    <img class="img_menu" width="200px" src="img/pexels-max-fischer-5212667.jpg" alt="">
+                </div>
+            </div>
+            <div class="container_menu">
+                <div class="object_menu">
+                    <b> Sách cổ tích tiếng Anh của các nước châu Âu</b>
+                    <img class="img_menu" width="200px" src="img/pexels-nasirun-khan-102497153-17120882.jpg" alt="">
+                </div>
+                <div class="object_menu">
+                    <b>Thử tài tiếng Anh tùng người bạn của mình</b>
+                    <img class="img_menu" width="200px" src="img/pexels-lukas-hartmann-304281-1127120.jpg" alt="">
+                </div>
+                <div class="object_menu">
+                    <b>Sách cổ tích tiếng Anh của các nước châu Á</b>
+                    <img class="img_menu" width="200px" src="img/pexels-introspectivedsgn-9258376.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <p style="font-weight: bold; color:rgba(255, 166, 0, 0.977);">Nhóm 8</p>
+        <div class="container_nav">
+            <div class="div_nav">
+                <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                <a href="">Facebook</a>
+            </div>
+            <div class="div_nav">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                <a href="">Youtube</a>
+            </div>
+            <div class="div_nav">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <a href="">Instagram</a>
+            </div>
+            <div class="div_nav">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <a href="">Twitter</a>
+            </div>
+            <div>
+                <p>Thành viên:</p>
+                <ul>
+                    <li>Nguyễn Đắc Tuấn Anh</li>
+                    <li>Phạm Đức Anh</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>

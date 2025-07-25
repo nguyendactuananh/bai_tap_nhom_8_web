@@ -16,21 +16,10 @@ body {
 .container {
     width: 100%;
     max-width: 450px;
-}
-
-.form-container {
     background: white;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-}
-
-.form-section {
-    display: block;
-}
-
-.form-section.hidden {
-    display: none;
 }
 
 h2 {
@@ -104,22 +93,3 @@ h2 {
     text-decoration: none;
     color: #0e2ebb;
 }
-
-/* Responsive Design
-@media (max-width: 480px) {
-    .form-container {
-        padding: 20px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
-    .input-group input {
-        padding: 10px 12px;
-    }
-
-    .login-button {
-        padding: 12px;
-    }
-} */
