@@ -7,197 +7,198 @@
     <title>Trang giới thiệu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-    /* Body */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
+        /* Body */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-    body {
-        background-color: #f9f9f9;
-    }
+        body {
+            background-color: #f9f9f9;
+        }
 
-    /* Header */
-    header {
-        margin: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 40px;
-        background-color: #ffffff;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 0 0 10px 10px;
-    }
+        /* Header */
+        header {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 10px 10px;
+        }
 
-    .logo img {
-        width: 150px;
-        height: 50px;
-        border-radius: 10px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease;
-    }
+        .logo img {
+            width: 150px;
+            height: 50px;
+            border-radius: 10px;
+            border: 1px solid #b3c1eeff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
 
-    .logo img:hover {
-        transform: scale(1.05);
-    }
+        .logo img:hover {
+            transform: scale(1.05);
+        }
 
-    .login {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
+        .login {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
 
-    .login i {
-        font-size: 20px;
-        color: #333;
-    }
+        .login i {
+            font-size: 20px;
+            color: #333;
+        }
 
-    .login a {
-        text-decoration: none;
-        align-items: center;
-        padding: 15px 20px;
-        font-size: 16px;
-        color: #333;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-        background: rgb(244, 242, 242);
-    }
+        .login a {
+            text-decoration: none;
+            align-items: center;
+            padding: 15px 20px;
+            font-size: 16px;
+            color: #333;
+            border-radius: 5px;
+            border: 1 solid rgb(244, 242, 242);
+            transition: all 0.3s ease;
+            background: rgb(244, 242, 242);
+        }
 
-    .login a:hover {
-        background: linear-gradient(135deg, #00c3ff, #ffff1c);
-        color: #000;
-        border-radius: 15px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        transform: scale(1.05);
-    }
+        .login a:hover {
+            background: linear-gradient(135deg, #00c3ff, #ffff1c);
+            color: #000;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
 
-    /* Main */
-    main {
-        margin: 10px 5px 10px 5px;
-        padding: 40px;
-        text-align: center;
-        background: lightblue;
-        border-radius: 10px 10px 0 0;
-        box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
-    }
+        /* Main */
+        main {
+            margin: 10px 5px 10px 5px;
+            padding: 40px;
+            text-align: center;
+            background: lightblue;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+        }
 
-    .gioi-thieu {
-        width: 61%;
-        margin: 0 auto;
-    }
+        .gioi-thieu {
+            width: 61%;
+            margin: 0 auto;
+        }
 
-    main h1 {
-        line-height: 1.3;
-        font-size: 32px;
-        color: #333;
-        margin-bottom: 20px;
-    }
+        main h1 {
+            line-height: 1.3;
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
 
-    main p {
-        font-size: 18px;
-        color: #302f2f;
-        line-height: 1.6;
-        text-align: left;
-    }
+        main p {
+            font-size: 18px;
+            color: #302f2f;
+            line-height: 1.6;
+            text-align: left;
+        }
 
-    .container {
-        margin-top: 40px;
-        padding: 10px;
-        padding-bottom: 30px;
-        background-color: rgb(248, 246, 246);
-        border: 1px solid #ccff00;
-        border-radius: 3px;
-        width: 100%;
-        justify-content: space-between;
-    }
+        .container {
+            margin-top: 40px;
+            padding: 10px;
+            padding-bottom: 30px;
+            background-color: rgb(248, 246, 246);
+            border: 1px solid #ccff00;
+            border-radius: 3px;
+            width: 100%;
+            justify-content: space-between;
+        }
 
-    .infor-container {
-        display: flex;
-    }
+        .infor-container {
+            display: flex;
+        }
 
-    .infor {
-        width: 30%;
-        margin: 15px 30px;
-        padding: 10px;
-        background-color: white;
-        border: 1px solid #9383e5;
-        border-radius: 15px;
+        .infor {
+            width: 30%;
+            margin: 15px 30px;
+            padding: 10px;
+            background-color: white;
+            border: 2px solid #c3bbefff;
+            border-radius: 15px;
 
-    }
+        }
 
-    .infor:hover {
-        transform: scale(1.05);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
+        .infor:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
 
-    .infor img {
-        margin-top: 10px;
-        margin-bottom: 30px;
-        width: 85%;
-        height: 350px;
-        border-radius: 20px;
-        border: 1px solid #0f39c4;
-        transition: transform 0.3s ease;
-    }
+        .infor img {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            width: 85%;
+            height: 350px;
+            border-radius: 20px;
+            border: 1px solid #b3c1eeff;
+            transition: transform 0.3s ease;
+        }
 
-    /* Footer */
-    footer {
-        display: flex;
-        margin: 0;
-        padding: 15px 40px;
-        background-color: #b4b2b2;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 10px 10px 0 0;
-    }
+        /* Footer */
+        footer {
+            display: flex;
+            margin: 0;
+            padding: 15px 40px;
+            background-color: #c9c7c7ff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px 10px 0 0;
+        }
 
-    .logo-footer {
-        display: flex;
-        align-items: center;
-    }
+        .logo-footer {
+            display: flex;
+            align-items: center;
+        }
 
-    .logo-footer img {
-        width: 150px;
-        height: 100px;
-        border-radius: 10px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease;
-    }
+        .logo-footer img {
+            width: 150px;
+            height: 100px;
+            border-radius: 10px;
+            border: 1px solid #7d93aaff;
+        }
 
-    .main-footer {
-        margin: 0 auto;
-    }
+        .main-footer {
+            margin: 0 auto;
+        }
 
-    .icon {
-        display: flex;
-        gap: 30px;
-        font-size: 25px;
-        margin: 20px 0 30px 0;
-    }
+        .icon {
+            display: flex;
+            gap: 30px;
+            font-size: 25px;
+            margin: 20px 0 30px 0;
+        }
 
-    .icon a {
-        text-decoration: none;
-        color: #000;
-    }
+        .icon a {
+            text-decoration: none;
+            color: #000;
+        }
 
-    .icon-infor {
-        padding: 5px;
-    }
+        .icon-infor {
+            padding: 5px;
+        }
 
-    .icon-infor:hover {
-        background: linear-gradient(135deg, #00c3ff, #ffff1c);
-        color: #000;
-        border-radius: 10px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        transform: scale(1.05);
-    }
+        .icon-infor:hover {
+            background: linear-gradient(135deg, #00c3ff, #ffff1c);
+            color: #000;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
 
-    .intro {
-        line-height: 1.6;
-        width: 60%;
-        margin-left: 30px;
-    }
+        .intro {
+            line-height: 1.6;
+            width: 60%;
+            margin-left: 30px;
+        }
     </style>
 </head>
 
@@ -205,7 +206,7 @@
 
     <header>
         <div class="logo">
-            <img src="logo.png" alt="Logo website">
+            <img src="../img/logo.png" alt="Logo website">
         </div>
         <div class="login">
             <a href="login.php"><i class="fa fa-sign-in" aria-hidden="true"></i> Hãy đăng nhập để sử dụng dịch vụ của
@@ -229,29 +230,29 @@
             <div class="infor-container">
                 <div class="infor">
                     <h4>Tiếng Anh Toàn Diện Theo Chuẩn Cambridge</h4>
-                    <img src="logo.png">
+                    <img src="../img/logo.png">
                 </div>
                 <div class="infor">
                     <h4>Tiếng Anh Toàn Diện Theo Chuẩn Cambridge</h4>
-                    <img src="logo.png">
+                    <img src="../img/logo.png">
                 </div>
                 <div class="infor">
                     <h4>Tiếng Anh Toàn Diện Theo Chuẩn Cambridge</h4>
-                    <img src="logo.png">
+                    <img src="../img/logo.png">
                 </div>
             </div>
             <div class="infor-container">
                 <div class="infor">
                     <h4>Tiếng Anh Toàn Diện Theo Chuẩn Cambridge</h4>
-                    <img src="logo.png">
+                    <img src="../img/logo.png">
                 </div>
                 <div class="infor">
                     <h4>Tiếng Anh Toàn Diện Theo Chuẩn Cambridge</h4>
-                    <img src="logo.png">
+                    <img src="../img/logo.png">
                 </div>
                 <div class="infor">
                     <h4>Tiếng Anh Toàn Diện Theo Chuẩn Cambridge</h4>
-                    <img src="logo.png">
+                    <img src="../img/logo.png">
                 </div>
             </div>
         </div>
@@ -259,7 +260,7 @@
 
     <footer>
         <div class="logo-footer">
-            <img src="logo.png" alt="Logo website">
+            <img src="../img/logo.png" alt="Logo website">
         </div>
         <div class="main-footer">
             <div class="icon">
