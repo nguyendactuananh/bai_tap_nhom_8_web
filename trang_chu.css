@@ -5,8 +5,8 @@ body {
 }
 
 body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #121212; /* Giữ nguyên nền chính */
+    color: #f0f0f0; /* Chữ tổng thể hơi off-white để dễ nhìn hơn */
 }
 
 nav {
@@ -21,8 +21,8 @@ nav {
 }
 
 body.dark-mode nav {
-    background-color: #1f1f1f;
-    color: #ffffff;
+    background-color: #1f1f1f; /* Giữ nguyên nền nav */
+    color: #f0f0f0; /* Chữ link trong nav */
 }
 
 nav a {
@@ -32,7 +32,7 @@ nav a {
 }
 
 body.dark-mode nav a {
-    color: #ffffff;
+    color: #f0f0f0; /* Chữ link trong nav */
 }
 
 a {
@@ -42,7 +42,7 @@ a {
 }
 
 body.dark-mode a {
-    color: #ffffff;
+    color: #f0f0f0; /* Chữ link tổng thể */
 }
 
 a:hover {
@@ -61,7 +61,7 @@ a:hover {
 }
 
 body.dark-mode .div_nav {
-    color: #ffffff;
+    color: #f0f0f0;
 }
 
 .div_nav:hover {
@@ -87,8 +87,8 @@ body.dark-mode .div_nav {
 
 body.dark-mode .input_search {
     border-color: #555;
-    background-color: #333;
-    color: #ffffff;
+    background-color: #333; /* Giữ nguyên background input */
+    color: #f0f0f0; /* Chữ trong input */
 }
 
 .container_body {
@@ -103,67 +103,270 @@ body.dark-mode .input_search {
 
 .lesson_frame {
     border-radius: 20px;
-    height: 900px;
+    height: 900px; /* Consider using min-height or removing fixed height for responsiveness */
     background-color: #b2cdff;
 }
 
 body.dark-mode .lesson_frame {
-    background-color: #2a2a2a;
-    color: #ffffff;
+    background-color: #2a2a2a; /* Giữ nguyên nền khung bài học */
 }
 
-body.dark-mode .lesson_frame h1,
+/* Đảm bảo tiêu đề "Các bài học dành cho bé" là màu trắng */
+.lesson_frame h1 {
+    color: #333333; /* Màu mặc định cho chế độ sáng */
+}
+body.dark-mode .lesson_frame h1 {
+    color: #ffffff !important; /* Đặt màu trắng cho tiêu đề "Các bài học dành cho bé" trong dark mode */
+}
+
+
 body.dark-mode .lesson_frame p {
-    color: #ffffff;
+    color: #f0f0f0;
 }
 
 .container_body_right {
     width: 30%;
 }
 
+/* --- CHỈNH SỬA PHẦN TIN TỨC (NEWS) BẮT ĐẦU --- */
+
 .news_frame {
-    height: 450px;
-    background-color: #b2fff1;
+    min-height: 450px;
+    background-color: #b2fff1; /* Màu nền sáng */
     border-radius: 20px;
+    padding: 15px; /* Thêm padding cho khung tổng thể */
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
 }
 
 body.dark-mode .news_frame {
-    background-color: #2a2a2a;
+    background-color: #2a2a2a; /* Giữ nguyên nền khung tin tức */
 }
 
-body.dark-mode .news_frame h1,
-body.dark-mode .news_frame p {
-    color: #ffffff;
+/* Đảm bảo tiêu đề "Tin tức, sự kiện" là màu trắng */
+.news_frame h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333333; /* Màu mặc định cho chế độ sáng */
+}
+body.dark-mode .news_frame h1 {
+    color: #ffffff !important; /* Đặt màu trắng cho tiêu đề "Tin tức, sự kiện" trong dark mode */
 }
 
-.menu {
+.news {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #cceeff;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+body.dark-mode .news {
+    background-color: #333; /* Giữ nguyên nền item tin tức */
+    border-color: #4a4a4a; /* Giữ nguyên border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.news:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+body.dark-mode .news:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+
+.object_news_left {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 0;
+}
+
+body.dark-mode .object_news_left {
+    background-color: #444; /* Giữ nguyên nền ảnh tin tức (nếu ảnh có trong suốt) */
+    border-color: #666; /* Giữ nguyên border */
+}
+
+.img_news {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.object_news_right {
+    flex-grow: 1;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+body.dark-mode .object_news_right {
+    background-color: transparent;
+}
+
+.object_news_right h2 {
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #0056b3; /* Màu mặc định cho chế độ sáng */
+}
+/* Đảm bảo tiêu đề (h2) của từng tin tức là màu trắng */
+body.dark-mode .object_news_right h2 {
+    color: #ffffff !important; /* Đặt màu trắng cho tiêu đề tin tức trong dark mode */
+}
+
+/* Đảm bảo nội dung (p) của tin tức là màu trắng */
+.object_news_right p {
+    font-size: 0.9em;
+    color: #555; /* Màu mặc định cho chế độ sáng */
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+body.dark-mode .object_news_right p {
+    color: #ffffff !important; /* Đặt màu trắng cho nội dung tin tức trong dark mode */
+}
+
+.object_news_right .action-links {
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+
+.object_news_right .action-links a {
+    color: #007bff; /* Màu link mặc định */
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    margin-right: 8px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.object_news_right .action-links a i {
+    padding-left: 5px;
+}
+
+.object_news_right .action-links a:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Override màu cho link xem thêm */
+.object_news_right .action-links a[href*="news_detail.php"] {
+    color: #ff0048c3; /* Giữ nguyên màu hồng/đỏ của bạn */
+    margin-left: 0;
+    padding-left: 0;
+}
+body.dark-mode .object_news_right .action-links a[href*="news_detail.php"] {
+    color: #ff6b91; /* Giữ nguyên màu hồng nhạt của bạn trong dark mode */
+}
+
+
+/* Điều chỉnh nút Sửa/Xóa cho admin */
+.object_news_right .action-links a.btn {
+    padding: 5px 10px;
+    font-size: 0.8em;
+    margin-right: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Nút "Thêm tin tức" ở cuối news_frame */
+.news_frame > div:last-child {
+    text-align: center;
+    margin-top: 20px;
+}
+.news_frame > div:last-child a {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+body.dark-mode .news_frame > div:last-child a {
+    background-color: #1f7a38; /* Giữ nguyên màu nút Thêm tin tức */
+}
+.news_frame > div:last-child a:hover {
+    background-color: #218838;
+}
+body.dark-mode .news_frame > div:last-child a:hover {
+    background-color: #196f2e;
+}
+/* --- CHỈNH SỬA PHẦN TIN TỨC (NEWS) KẾT THÚC --- */
+
+
+.menu { /* Đây là các item bài học trong .container_body_left */
     width: 95%;
     background-color: #f2f2f2;
     padding: 12px;
     border-radius: 20px;
     border: 1px solid #ccff00;
-    height: 235px;
+    height: 235px; /* Cân nhắc điều chỉnh để phù hợp với nội dung động */
     margin: 12px;
     display: flex;
 }
 
 body.dark-mode .menu {
-    background-color: #333;
-    border-color: #a6a6a6;
+    background-color: #333; /* Giữ nguyên nền item bài học */
+    border-color: #a6a6a6; /* Giữ nguyên border */
+    color: #ffffff; /* Màu chữ trực tiếp cho .menu là màu trắng */
 }
 
 .object_menu_left {
     width: 30%;
+    height: 100%;
     background-color: #f2f2f2;
-    padding: 12px;
     border-radius: 20px;
     border: 1px solid #ccff00;
     margin-right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 body.dark-mode .object_menu_left {
-    background-color: #333;
-    border-color: #555;
+    background-color: #333; /* Giữ nguyên nền ảnh bài học (nếu ảnh có trong suốt) */
+    border-color: #555; /* Giữ nguyên border */
+}
+
+.img_menu {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Quan trọng: Cắt ảnh để lấp đầy, giữ tỷ lệ khung hình */
+    border-radius: 20px;
 }
 
 .object_menu_right {
@@ -175,105 +378,117 @@ body.dark-mode .object_menu_left {
 }
 
 body.dark-mode .object_menu_right {
-    background-color: #333;
-    border-color: #555;
+    background-color: #333; /* Giữ nguyên nền nội dung bài học */
+    border-color: #555; /* Giữ nguyên border */
+    color: #ffffff; /* Màu chữ trực tiếp cho .object_menu_right là màu trắng */
 }
 
 body.dark-mode .object_menu_right h2,
 body.dark-mode .object_menu_right p {
-    color: #ffffff;
+    color: #ffffff !important; /* Đảm bảo cả h2 và p trong object_menu_right đều màu trắng */
 }
 
-.img_menu {
-    padding-top: 20px;
-    display: block;
-    border-radius: 20px;
-}
-
-.news {
-    margin: 12px;
-    width: 90%;
-    background-color: #f2f2f2;
-    padding: 12px;
-    border-radius: 20px;
-    border: 1px solid #ccff00;
-    height: 150px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 12px;
-}
-
-body.dark-mode .news {
-    background-color: #333;
-    border-color: #555;
-}
-
-.object_news_left {
-    width: 100px;
-    background-color: #f2f2f2;
-    padding: 12px;
-    border-radius: 20px;
-    border: 1px solid #ff0000ff;
-    margin-right: 12px;
-}
-
-body.dark-mode .object_news_left {
-    background-color: #333;
-    border-color: #555;
-}
-
-.object_news_right {
-    width: auto;
-    background-color: #f2f2f2;
-    padding: 5px;
-    border-radius: 20px;
-    border: 1px solid #ccff00;
-}
-
-body.dark-mode .object_news_right {
-    background-color: #333;
-    border-color: #555;
-}
-
-body.dark-mode .object_news_right h2,
-body.dark-mode .object_news_right p {
-    color: #ffffff;
-}
-
-.img_news {
-    padding-top: 20px;
-    display: block;
-    border-radius: 20px;
-}
-
+/* --- CHỈNH SỬA PHẦN BÀI KIỂM TRA (TEST) BẮT ĐẦU --- */
 .test_frame {
-    height: 450px;
+    min-height: 450px;
     background-color: #b2fff1;
     border-radius: 20px;
+    margin-top: 15px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 body.dark-mode .test_frame {
-    background-color: #2a2a2a;
+    background-color: #2a2a2a; /* Giữ nguyên nền khung bài kiểm tra */
 }
 
-body.dark-mode .test_frame h1,
-body.dark-mode .test_frame p {
-    color: #ffffff;
+/* Đảm bảo tiêu đề "Bài kiểm tra" là màu trắng */
+.test_frame h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333333; /* Màu mặc định cho chế độ sáng */
+}
+body.dark-mode .test_frame h1 {
+    color: #ffffff !important; /* Đặt màu trắng cho tiêu đề "Bài kiểm tra" trong dark mode */
 }
 
-.object_news {
+.object_news { /* Tên class này có thể gây nhầm lẫn vì nó được dùng cho tests, nhưng tôi sẽ giữ theo bạn */
     background-color: #f2f2f2;
     padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #cceeff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.2s ease-in-out;
 }
 
 body.dark-mode .object_news {
-    background-color: #333;
+    background-color: #333; /* Giữ nguyên nền item bài kiểm tra */
+    border-color: #4a4a4a; /* Giữ nguyên border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.object_news:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+body.dark-mode .object_news:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
-body.dark-mode .object_news h2,
-body.dark-mode .object_news p {
-    color: #ffffff;
+
+.object_news h2 {
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #0099ff; /* Màu mặc định cho chế độ sáng */
 }
+/* Đảm bảo tiêu đề (h2) của từng bài kiểm tra là màu trắng */
+body.dark-mode .object_news h2 {
+    color: #ffffff !important; /* Đặt màu trắng cho tiêu đề bài kiểm tra trong dark mode */
+}
+
+/* Đảm bảo nội dung (p) của bài kiểm tra là màu trắng */
+.object_news p {
+    font-size: 0.9em;
+    color: #555; /* Màu mặc định cho chế độ sáng */
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+body.dark-mode .object_news p {
+    color: #ffffff !important; /* Đặt màu trắng cho nội dung bài kiểm tra trong dark mode */
+}
+
+.test_frame > div:last-child {
+    text-align: center;
+    margin-top: 20px;
+}
+.test_frame > div:last-child a {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+body.dark-mode .test_frame > div:last-child a {
+    background-color: #1f7a38; /* Giữ nguyên màu nút Thêm bài kiểm tra */
+}
+.test_frame > div:last-child a:hover {
+    background-color: #218838;
+}
+body.dark-mode .test_frame > div:last-child a:hover {
+    background-color: #196f2e;
+}
+/* --- CHỈNH SỬA PHẦN BÀI KIỂM TRA (TEST) KẾT THÚC --- */
+
 
 /* Dropdown styles */
 .dropdown {
@@ -293,7 +508,7 @@ body.dark-mode .object_news p {
 }
 
 body.dark-mode .dropdown-menu {
-    background-color: #1f1f1f;
+    background-color: #1f1f1f; /* Giữ nguyên nền dropdown */
 }
 
 .dropdown-menu a {
@@ -304,7 +519,7 @@ body.dark-mode .dropdown-menu {
 }
 
 body.dark-mode .dropdown-menu a {
-    color: #ffffff;
+    color: #f0f0f0;
 }
 
 .dropdown-menu a:hover {
@@ -331,7 +546,7 @@ body.dark-mode .dropdown-menu a {
 }
 
 body.dark-mode .btn-success {
-    background-color: #1f7a38;
+    background-color: #1f7a38; /* Giữ nguyên màu nút success */
 }
 
 .btn-warning {
@@ -340,7 +555,7 @@ body.dark-mode .btn-success {
 }
 
 body.dark-mode .btn-warning {
-    background-color: #d39e00;
+    background-color: #d39e00; /* Giữ nguyên màu nút warning */
 }
 
 .btn-danger {
@@ -349,7 +564,7 @@ body.dark-mode .btn-warning {
 }
 
 body.dark-mode .btn-danger {
-    background-color: #a71d2a;
+    background-color: #a71d2a; /* Giữ nguyên màu nút danger */
 }
 
 .btn-primary {
@@ -358,5 +573,5 @@ body.dark-mode .btn-danger {
 }
 
 body.dark-mode .btn-primary {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Giữ nguyên màu nút primary */
 }

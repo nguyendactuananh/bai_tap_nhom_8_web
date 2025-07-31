@@ -37,29 +37,29 @@
             <div class="infor-container">
                 <div class="infor">
                     <h4>Tiếng Anh Toàn Diện Theo Chuẩn Cambridge</h4>
-                    <img src="img/english-british-england-language-education-concept-2048x1369.jpg">
+                    <img src="img\image0.png">
                 </div>
                 <div class="infor">
-                    <h4>Tiếng Anh Toàn Diện Theo Chuẩn Cambridge</h4>
-                    <img src="img/english-british-england-language-education-concept-2048x1369.jpg">
+                    <h4>English for Communication(Ages 6 - 18)</h4>
+                    <img src="img\image1.png">
                 </div>
                 <div class="infor">
-                    <h4>Tiếng Anh Toàn Diện Theo Chuẩn Cambridge</h4>
-                    <img src="img/english-british-england-language-education-concept-2048x1369.jpg">
+                    <h4>English for School Examp</h4>
+                    <img src="img\image2.png">
                 </div>
             </div>
             <div class="infor-container">
                 <div class="infor">
-                    <h4>Tiếng Anh Toàn Diện Theo Chuẩn Cambridge</h4>
-                    <img src="img/english-british-england-language-education-concept-2048x1369.jpg">
+                    <h4>Học Tiếng Anh qua podcast</h4>
+                    <img src="img\image3.png">
                 </div>
                 <div class="infor">
-                    <h4>Tiếng Anh Toàn Diện Theo Chuẩn Cambridge</h4>
-                    <img src="img/english-british-england-language-education-concept-2048x1369.jpg">
+                    <h4>Học Tiếng Anh qua truyện</h4>
+                    <img src="img\image4.png">
                 </div>
                 <div class="infor">
-                    <h4>Tiếng Anh Toàn Diện Theo Chuẩn Cambridge</h4>
-                    <img src="img/english-british-england-language-education-concept-2048x1369.jpg">
+                    <h4>Học Tiếng Anh qua video</h4>
+                    <img src="img\image5.png">
                 </div>
             </div>
         </div>

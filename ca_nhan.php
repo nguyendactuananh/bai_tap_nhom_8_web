@@ -1,84 +1,94 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thông tin cá nhân</title>
     <link rel="stylesheet" type="text/css" href="trang_chu.css" />
     <style>
-        body {
+    body {
         font-family: Arial, sans-serif;
-        background-color:#b2eaff;
-        }
-        nav {
-            background-color: #f2f2f2;
-            padding: 12px;
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            margin-left: -7px;
-            margin-top: -8px;
-            margin-bottom: -8px;
-        }
+        background-color: #b2eaff;
+    }
 
-        nav a {
-            margin: 0 12px;
-            text-decoration: none;
-            color: #333;
-        }
-        a {
-            margin: 0 12px;
-            text-decoration: none;
-            color: #333;
-        }
-        a:hover{
-            background: linear-gradient(135deg, #00c3ff, #ffff1c);
-            border-radius: 5px;
-            padding: 5px;
-        }
-        .div_nav{
-            margin: 0 12px;
-            text-decoration: none;
-            color: #333;
-            display: flex;
-            align-items: center;
-        }
-        .div_nav:hover{
-            background: linear-gradient(135deg, #00c3ff, #ffff1c);
-            border-radius: 5px;
-            padding: 5px;
-        }
-        .container_nav{
-            display: flex;
-            align-items: center;
-            padding-right: 20px;
-        }
-        .input_search{
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 5px;
-            margin-right: 10px;
-            width: 200px;
-            height: 100%;
-        }
-            table {
-            border: 1px solid black;
-            width: 100%;
-            }
+    nav {
+        background-color: #f2f2f2;
+        padding: 12px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-left: -7px;
+        margin-top: -8px;
+        margin-bottom: -8px;
+    }
 
-        th,td {
-            border: 1px solid #ddd;
-            padding: 8px;
+    nav a {
+        margin: 0 12px;
+        text-decoration: none;
+        color: #333;
+    }
 
-        }
+    a {
+        margin: 0 12px;
+        text-decoration: none;
+        color: #333;
+    }
 
-        th {
-            background-color: #f8d4eeff;
-            text-align: left;
-        }
+    a:hover {
+        background: linear-gradient(135deg, #00c3ff, #ffff1c);
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .div_nav {
+        margin: 0 12px;
+        text-decoration: none;
+        color: #333;
+        display: flex;
+        align-items: center;
+    }
+
+    .div_nav:hover {
+        background: linear-gradient(135deg, #00c3ff, #ffff1c);
+        border-radius: 5px;
+        padding: 5px;
+    }
+
+    .container_nav {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+    }
+
+    .input_search {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;
+        margin-right: 10px;
+        width: 200px;
+        height: 100%;
+    }
+
+    table {
+        border: 1px solid black;
+        width: 100%;
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+
+    }
+
+    th {
+        background-color: #f8d4eeff;
+        text-align: left;
+    }
     </style>
 </head>
+
 <body>
     <nav>
         <p style="font-weight: bold; color:rgba(255, 166, 0, 0.977);">Nhóm 8</p>
@@ -140,15 +150,15 @@
 
             if ($row = mysqli_fetch_array($result)) {
         ?>
-            <tr>
-                <td><?php echo $row['email']; ?></td>
-                <td><?php echo $row['full_name']; ?></td>
-                <td><?php echo $row['phone_number']; ?></td>
-                <td><?php echo $row['gender']; ?></td>
-                <td><?php echo $row['birth_year']; ?></td>
-                <td><?php echo $row['password']; ?></td>
-                <td><img src="<?php echo $row['user_image']; ?>" alt="Ảnh đại diện" width="50"></td>
-            </tr>
+        <tr>
+            <td><?php echo $row['email']; ?></td>
+            <td><?php echo $row['full_name']; ?></td>
+            <td><?php echo $row['phone_number']; ?></td>
+            <td><?php echo $row['gender']; ?></td>
+            <td><?php echo $row['birth_year']; ?></td>
+            <td><?php echo $row['password']; ?></td>
+            <td><img src="<?php echo $row['user_image']; ?>" alt="Ảnh đại diện" width="50"></td>
+        </tr>
         <?php
             }
         ?>
@@ -173,4 +183,5 @@
     });
     </script>
 </body>
+
 </html>

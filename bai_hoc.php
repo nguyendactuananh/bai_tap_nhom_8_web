@@ -29,23 +29,28 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['role'])) {
     <nav>
         <p style="font-weight: bold; color:rgba(255, 166, 0, 0.977);">Nhóm 8</p>
         <div class="container_nav">
-            <div class="div_nav">
-                <i class="fa fa-sign-out" aria-hidden="true"></i>
-                <a href="trang_chu.php?page_layout=dang_xuat">Đăng xuất</a>
-            </div>
+            <input class="input_search" type="text" placeholder="Dịch tiếng anh">
+
             <div class="div_nav">
                 <i class="fa fa-home" aria-hidden="true"></i>
                 <a href="trang_chu.php">Trang chủ</a>
             </div>
             <div class="div_nav">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <a href="trang_chu.php?page_layout=ca_nhan">Cá nhân</a>
+                <i class="fa fa-book" aria-hidden="true"></i>
+                <a href="bai_hoc.php">Bài học</a>
             </div>
             <div class="div_nav">
-                <i class="fa fa-wrench" aria-hidden="true"></i>
-                <a href="trang_chu.php?page_layout=cai_dat">Cài đặt</a>
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a href="ca_nhan.php">Cá nhân</a>
             </div>
-            <input class="input_search" type="text" placeholder="Dịch tiếng anh">
+            <div class="div_nav dropdown">
+                <i class="fa fa-wrench" aria-hidden="true"></i>
+                <a href="#" class="dropdown-toggle">Cài đặt</a>
+                <div class="dropdown-menu">
+                    <a href="#" class="theme-option" data-theme="toggle">Đổi chế độ</a>
+                    <a href="trang_gioi_thieu.php">Đăng xuất</a>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -68,8 +73,7 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['role'])) {
                 <div class="menu">
                     <div class="object_menu_left">
                         <!-- Lấy ảnh bài học -->
-                        <img class="img_menu" src="<?php echo ($lesson_image); ?>" alt="Ảnh bài học"
-                            width="100%">
+                        <img class="img_menu" src="<?php echo ($lesson_image); ?>" alt="Ảnh bài học" width="100%">
                     </div>
                     <div class="object_menu_right">
                         <!-- Lấy stt bài học -->
@@ -97,10 +101,17 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['role'])) {
                             onclick="return confirm('Bạn có chắc muốn xóa bài học này?')">Xóa</a>
                         <?php endif; ?>
                     </div>
+
                 </div>
                 <?php } ?>
             </div>
+            <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+            <div style="text-align: center; margin: 20px;">
+                <a href="them_bai_hoc.php" class="btn btn-success">+ Thêm bài học mới</a>
+            </div>
+            <?php endif; ?>
         </div>
+
     </div>
 
     <!-- Footer -->
@@ -133,6 +144,25 @@ if (!isset($_SESSION['email']) || !isset($_SESSION['role'])) {
             </div>
         </div>
     </nav>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Khởi tạo chế độ từ localStorage
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.body.classList.add(savedTheme + '-mode');
+
+        // Xử lý sự kiện đổi chế độ
+        const themeOption = document.querySelector('.theme-option');
+        themeOption.addEventListener('click', function(e) {
+            e.preventDefault();
+            const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+            document.body.classList.remove('light-mode', 'dark-mode');
+            document.body.classList.add(newTheme + '-mode');
+            localStorage.setItem('theme', newTheme);
+        });
+    });
+    </script>
 </body>
 
 </html>

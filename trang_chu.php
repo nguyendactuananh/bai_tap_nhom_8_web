@@ -28,6 +28,7 @@ if (isset($_GET['page_layout'])) {
 
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,6 +36,7 @@ if (isset($_GET['page_layout'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="trang_chu.css" />
 </head>
+
 <body>
     <nav>
         <p style="font-weight: bold; color:rgba(255, 166, 0, 0.977);">Nhóm 8</p>
@@ -78,21 +80,24 @@ if (isset($_GET['page_layout'])) {
                     $lesson_image = $row['lesson_image'];
                     $content = $row['content'];
                     ?>
-                    <div class="menu">
-                        <div class="object_menu_left">
-                            <img class="img_menu" src="<?php echo ($lesson_image); ?>" alt="Ảnh đại diện" width="100%" height = "100%">
-                        </div>
-                        <div class="object_menu_right">
-                            <h2 style="color: #333333;"><?php echo ($lesson_name); ?></h2>
-                            <p style="color: #333333;"><?php echo ($description); ?></p>
-                            <p style="color: #333333;"><?php echo ($duration); ?></p>
-                            <a style="color: #ff0048c3;" href="bai_hoc_detail.php?id=<?php echo $lessonId; ?>">Xem bài học<i style="padding-left:10px" class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
-                                <a href="sua_bai_hoc.php?id=<?php echo $lessonId; ?>" class="btn btn-warning">Sửa</a>
-                                <a href="xoa_bai_hoc.php?id=<?php echo $lessonId; ?>" class="btn btn-danger" onclick="return confirm('Bạn có chắc muốn xóa bài học này?')">Xóa</a>
-                            <?php endif; ?>
-                        </div>
+                <div class="menu">
+                    <div class="object_menu_left">
+                        <img class="img_menu" src="<?php echo ($lesson_image); ?>" alt="Ảnh đại diện" width="90%"
+                            height="150px">
                     </div>
+                    <div class="object_menu_right">
+                        <h2 style="color: #333333;"><?php echo ($lesson_name); ?></h2>
+                        <p style="color: #333333;"><?php echo ($description); ?></p>
+                        <p style="color: #333333;"><?php echo ($duration); ?></p>
+                        <a style="color: #ff0048c3;" href="bai_hoc_detail.php?id=<?php echo $lessonId; ?>">Xem bài học<i
+                                style="padding-left:10px" class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+                        <a href="sua_bai_hoc.php?id=<?php echo $lessonId; ?>" class="btn btn-warning">Sửa</a>
+                        <a href="xoa_bai_hoc.php?id=<?php echo $lessonId; ?>" class="btn btn-danger"
+                            onclick="return confirm('Bạn có chắc muốn xóa bài học này?')">Xóa</a>
+                        <?php endif; ?>
+                    </div>
+                </div>
                 <?php } ?>
                 <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
                 <div style="text-align: center; margin: 20px;">
@@ -115,25 +120,28 @@ if (isset($_GET['page_layout'])) {
                     $image = $row['image'];
                     $subtitle = $row['subtitle'];
                     ?>
-                    <div class="news">
-                        <div class="object_news_left">
-                            <img class="img_menu" src="<?php echo ($image); ?>" alt="Ảnh đại diện" width="100%" height="90%">
-                        </div>
-                        <div class="object_news_right">
-                            <h2 style="color: #333333;"><?php echo ($title); ?></h2>
-                            <p style="color: #333333;"><?php echo ($subtitle); ?></p>
-                            <a style="color: #ff0048c3;" href="news_detail.php?id=<?php echo $newsID; ?>">Xem thêm<i style="padding-left:10px" class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
-                                <a href="edit_news.php?id=<?php echo $newsID; ?>">Sửa</a>
-                                <a href="delete_news.php?id=<?php echo $newsID; ?>" onclick="return confirm('Bạn có chắc muốn xóa tin tức này?')">Xóa</a>
-                            <?php endif; ?>
-                        </div>
+                <div class="news">
+                    <div class="object_news_left">
+                        <img class="img_menu" src="<?php echo ($image); ?>" alt="Ảnh đại diện" width="100%"
+                            height="90%">
                     </div>
+                    <div class="object_news_right">
+                        <h2 style="color: #333333;"><?php echo ($title); ?></h2>
+                        <p style="color: #333333;"><?php echo ($subtitle); ?></p>
+                        <a style="color: #ff0048c3;" href="news_detail.php?id=<?php echo $newsID; ?>">Xem thêm<i
+                                style="padding-left:10px" class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+                        <a href="edit_news.php?id=<?php echo $newsID; ?>">Sửa</a>
+                        <a href="delete_news.php?id=<?php echo $newsID; ?>"
+                            onclick="return confirm('Bạn có chắc muốn xóa tin tức này?')">Xóa</a>
+                        <?php endif; ?>
+                    </div>
+                </div>
                 <?php } ?>
                 <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
-                    <div style="text-align: center; margin-bottom: 20px;">
-                        <a href="add_news.php">+ Thêm tin tức</a>
-                    </div>
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <a href="add_news.php">+ Thêm tin tức</a>
+                </div>
                 <?php endif; ?>
             </div>
             <div class="test_frame">
@@ -146,22 +154,24 @@ if (isset($_GET['page_layout'])) {
                     $Description = $row['description'];
                     $TestID = $row['TestID'];
                     ?>
-                    <div class="news">
-                        <div class="object_news">
-                            <h2 style="color: #333333;"><?php echo ($TestName); ?></h2>
-                            <p style="color: #333333;"><?php echo ($Description); ?></p>
-                            <a style="color: #ff0048c3;" href="test_detail.php?id=<?php echo $TestID; ?>">Xem thêm<i style="padding-left:10px" class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
-                                <a href="edit_test.php?id=<?php echo $TestID; ?>">Sửa</a>
-                                <a href="delete_test.php?id=<?php echo $TestID; ?>" onclick="return confirm('Bạn có chắc muốn xóa bài kiểm tra này?')">Xóa</a>
-                            <?php endif; ?>
-                        </div>
+                <div class="news">
+                    <div class="object_news">
+                        <h2 style="color: #333333;"><?php echo ($TestName); ?></h2>
+                        <p style="color: #333333;"><?php echo ($Description); ?></p>
+                        <a style="color: #ff0048c3;" href="test_detail.php?id=<?php echo $TestID; ?>">Xem thêm<i
+                                style="padding-left:10px" class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+                        <a href="edit_test.php?id=<?php echo $TestID; ?>">Sửa</a>
+                        <a href="delete_test.php?id=<?php echo $TestID; ?>"
+                            onclick="return confirm('Bạn có chắc muốn xóa bài kiểm tra này?')">Xóa</a>
+                        <?php endif; ?>
                     </div>
+                </div>
                 <?php } ?>
                 <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
-                    <div style="text-align: center; margin-bottom: 20px;">
-                        <a href="add_test.php">+ Thêm bài kiểm tra</a>
-                    </div>
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <a href="add_test.php">+ Thêm bài kiểm tra</a>
+                </div>
                 <?php endif; ?>
             </div>
         </div>
@@ -215,4 +225,5 @@ if (isset($_GET['page_layout'])) {
     });
     </script>
 </body>
+
 </html>

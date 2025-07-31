@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 30, 2025 lúc 06:27 AM
+-- Thời gian đã tạo: Th7 31, 2025 lúc 09:31 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -34,15 +34,15 @@ CREATE TABLE `lesson` (
   `description` text DEFAULT NULL,
   `content` text NOT NULL,
   `lesson_image` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `lesson`
 --
 
 INSERT INTO `lesson` (`LessonID`, `lesson_name`, `duration`, `description`, `content`, `lesson_image`) VALUES
-(1, 'Bài học mở đầu b', '00:00:00', 'Câu chào\r\nCâu hỏi thăm xã giao', 'Hello!\r\nWhat\'s up bro?\r\nHow are you?\r\n- I\'m fine. And you?', 'images/lessons/math_addition.jpg'),
-(2, 'Tiếng Anh: Từ vựng cơ bản', '02:00:00', 'Học các từ vựng Tiếng Anh thông dụng.', 'Nội dung: Từ vựng về gia đình, công việc...', 'images/lessons/english_vocabulary.jpg');
+(1, 'Bài học mở đầu', '00:02:30', 'Các câu chào hỏi cơ bản.', 'A: Hey, What\'s up bro?\r\nB: Very Good! And you?\r\nA: Me too, Let\'s play to Pubg together!', 'img/lessons/lesson1.png'),
+(8, 'Học câu chuyện', '01:15:00', 'Tìm hiểu các khái niệm cơ bản về phát triển web, bao gồm HTML, CSS và JavaScript.', 'Nội dung chi tiết về HTML, CSS, JavaScript và cách chúng hoạt động cùng nhau để tạo nên một trang web động...', 'img/lessons/lesson2.png');
 
 -- --------------------------------------------------------
 
@@ -57,15 +57,14 @@ CREATE TABLE `news` (
   `author` varchar(100) NOT NULL,
   `image` varchar(255) DEFAULT NULL,
   `subtitle` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `news`
 --
 
 INSERT INTO `news` (`NewsID`, `title`, `content`, `author`, `image`, `subtitle`) VALUES
-(1, 'Tầm quan trọng của giáo dục trực tuyến', 'Bài viết thảo luận về lợi ích của học trực tuyến trong thời đại số.', 'Nguyễn Văn C', 'images/news/online_education.jpg', 'Học tập mọi lúc, mọi nơi'),
-(2, 'Công nghệ AI trong giáo dục', 'AI đang thay đổi cách chúng ta học tập và giảng dạy.', 'Trần Thị D', 'images/news/ai_education.jpg', 'Tương lai của giáo dục');
+(11, 'Nguyễn Đắc Tuấn Anh đẹp trai', 'Nguyễn Đắc Tuấn Anh đẹp traiNguyễn Đắc Tuấn Anh đẹp traiNguyễn Đắc Tuấn Anh đẹp traiNguyễn Đắc Tuấn Anh đẹp traiNguyễn Đắc Tuấn Anh đẹp traiNguyễn Đắc Tuấn Anh đẹp traiNguyễn Đắc Tuấn Anh đẹp traiNguyễn Đắc Tuấn Anh đẹp traiNguyễn Đắc Tuấn Anh đẹp traiNguyễn Đắc Tuấn Anh đẹp traiNguyễn Đắc Tuấn Anh đẹp traiNguyễn Đắc Tuấn Anh đẹp traiNguyễn Đắc Tuấn Anh đẹp traiNguyễn Đắc Tuấn Anh đẹp trai', 'NGUYỄN ĐẮC TUẤN ANH', 'img/news/Screenshot 2025-06-09 232655.png', 'Nguyễn Đắc Tuấn Anh đẹp trai');
 
 -- --------------------------------------------------------
 
@@ -78,15 +77,14 @@ CREATE TABLE `test` (
   `test_name` varchar(255) NOT NULL,
   `description` text DEFAULT NULL,
   `content` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `test`
 --
 
 INSERT INTO `test` (`TestID`, `test_name`, `description`, `content`) VALUES
-(1, 'Kiểm tra Toán cơ bản', 'Bài kiểm tra về các khái niệm toán học cơ bản', 'Câu 1: 2 + 2 = ? \nCâu 2: Giải phương trình x + 5 = 10'),
-(2, 'Kiểm tra Tiếng Anh', 'Kiểm tra từ vựng và ngữ pháp Tiếng Anh', 'Câu 1: What is the capital of France? \nCâu 2: Fill in the blank: I ___ a student.');
+(2, 'Kiểm tra Tiếng Anh', 'Kiểm tra từ vựng và ngữ pháp Tiếng Anh', 'Câu 1: What is the capital of France? \r\nCâu 2: Fill in the blank: I ___ a student.\r\ncâu 3: ai ngu hơn Đức Anhhh');
 
 -- --------------------------------------------------------
 
@@ -103,18 +101,16 @@ CREATE TABLE `user` (
   `password` varchar(255) NOT NULL,
   `role` enum('admin','user') DEFAULT 'user',
   `user_image` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `user`
 --
 
 INSERT INTO `user` (`email`, `full_name`, `phone_number`, `gender`, `birth_year`, `password`, `role`, `user_image`) VALUES
-('binh11@edu.com', 'Nguyễn Thị Bình', '0147852369', 'Nữ', 2025, '321', 'user', NULL),
-('nguyen.van.a@gmail.com', 'Nguyễn Văn A', '0912345678', 'Nam', 1995, 'hashed_password_1', 'user', 'images/users/nguyen_van_a.jpg'),
-('oke@gmail.com', 'Ô Văn Kê', '0321654987', 'Nam', 2025, '123', 'user', NULL),
-('sung@edu.com', 'Hồ Thị Sung', '0123456789', 'Nữ', 2025, '123', 'user', NULL),
-('tran.thi.b@gmail.com', 'Trần Thị B', '0987654321', 'Nữ', 1998, '123', 'admin', 'images/users/tran_thi_b.jpg');
+('admin@gmail.com', 'Admin Hansome', '09999999999', 'Khác', 2004, '123', 'admin', 'images/users/admin.jpg'),
+('ducanh@edu.com', 'Phạm Đức Anh', '0987654321', 'Nam', 2004, '111', 'user', 'img/users/avt2.png'),
+('ta2@gmail.com', 'Nguyễn Đắc Tuấn Anh', '0123456789', 'Nam', 2022, '321', 'user', NULL);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -152,19 +148,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT cho bảng `lesson`
 --
 ALTER TABLE `lesson`
-  MODIFY `LessonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `LessonID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `news`
 --
 ALTER TABLE `news`
-  MODIFY `NewsID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `NewsID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT cho bảng `test`
 --
 ALTER TABLE `test`
-  MODIFY `TestID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `TestID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
