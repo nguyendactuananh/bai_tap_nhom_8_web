@@ -5,8 +5,8 @@ body {
 }
 
 body.dark-mode {
-    background-color: #121212; /* Giữ nguyên nền chính */
-    color: #f0f0f0; /* Chữ tổng thể hơi off-white để dễ nhìn hơn */
+    background-color: #121212; 
+    color: #f0f0f0; 
 }
 
 nav {
@@ -21,8 +21,8 @@ nav {
 }
 
 body.dark-mode nav {
-    background-color: #1f1f1f; /* Giữ nguyên nền nav */
-    color: #f0f0f0; /* Chữ link trong nav */
+    background-color: #1f1f1f; 
+    color: #f0f0f0; 
 }
 
 nav a {
@@ -32,7 +32,7 @@ nav a {
 }
 
 body.dark-mode nav a {
-    color: #f0f0f0; /* Chữ link trong nav */
+    color: #f0f0f0; 
 }
 
 a {
@@ -42,7 +42,7 @@ a {
 }
 
 body.dark-mode a {
-    color: #f0f0f0; /* Chữ link tổng thể */
+    color: #f0f0f0; 
 }
 
 a:hover {
@@ -87,8 +87,8 @@ body.dark-mode .div_nav {
 
 body.dark-mode .input_search {
     border-color: #555;
-    background-color: #333; /* Giữ nguyên background input */
-    color: #f0f0f0; /* Chữ trong input */
+    background-color: #333; 
+    color: #f0f0f0; 
 }
 
 .container_body {
@@ -103,20 +103,20 @@ body.dark-mode .input_search {
 
 .lesson_frame {
     border-radius: 20px;
-    height: 900px; /* Consider using min-height or removing fixed height for responsiveness */
+    height: 900px;
     background-color: #b2cdff;
 }
 
 body.dark-mode .lesson_frame {
-    background-color: #2a2a2a; /* Giữ nguyên nền khung bài học */
+    background-color: #2a2a2a; 
 }
 
-/* Đảm bảo tiêu đề "Các bài học dành cho bé" là màu trắng */
+
 .lesson_frame h1 {
-    color: #333333; /* Màu mặc định cho chế độ sáng */
+    color: #333333; 
 }
 body.dark-mode .lesson_frame h1 {
-    color: #ffffff !important; /* Đặt màu trắng cho tiêu đề "Các bài học dành cho bé" trong dark mode */
+    color: #ffffff !important; 
 }
 
 
@@ -128,29 +128,28 @@ body.dark-mode .lesson_frame p {
     width: 30%;
 }
 
-/* --- CHỈNH SỬA PHẦN TIN TỨC (NEWS) BẮT ĐẦU --- */
 
 .news_frame {
     min-height: 450px;
-    background-color: #b2fff1; /* Màu nền sáng */
+    background-color: #b2fff1; 
     border-radius: 20px;
-    padding: 15px; /* Thêm padding cho khung tổng thể */
-    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+    padding: 15px; 
+    box-sizing: border-box; 
 }
 
 body.dark-mode .news_frame {
-    background-color: #2a2a2a; /* Giữ nguyên nền khung tin tức */
+    background-color: #2a2a2a; 
 }
 
-/* Đảm bảo tiêu đề "Tin tức, sự kiện" là màu trắng */
+
 .news_frame h1 {
     margin-top: 0;
     margin-bottom: 20px;
     text-align: center;
-    color: #333333; /* Màu mặc định cho chế độ sáng */
+    color: #333333; 
 }
 body.dark-mode .news_frame h1 {
-    color: #ffffff !important; /* Đặt màu trắng cho tiêu đề "Tin tức, sự kiện" trong dark mode */
+    color: #ffffff !important; 
 }
 
 .news {
@@ -168,8 +167,8 @@ body.dark-mode .news_frame h1 {
 }
 
 body.dark-mode .news {
-    background-color: #333; /* Giữ nguyên nền item tin tức */
-    border-color: #4a4a4a; /* Giữ nguyên border */
+    background-color: #333; 
+    border-color: #4a4a4a; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
@@ -197,8 +196,8 @@ body.dark-mode .news:hover {
 }
 
 body.dark-mode .object_news_left {
-    background-color: #444; /* Giữ nguyên nền ảnh tin tức (nếu ảnh có trong suốt) */
-    border-color: #666; /* Giữ nguyên border */
+    background-color: #444; 
+    border-color: #666; 
 }
 
 .img_news {
@@ -228,17 +227,16 @@ body.dark-mode .object_news_right {
     font-size: 1.1em;
     margin-top: 0;
     margin-bottom: 5px;
-    color: #0056b3; /* Màu mặc định cho chế độ sáng */
-}
-/* Đảm bảo tiêu đề (h2) của từng tin tức là màu trắng */
-body.dark-mode .object_news_right h2 {
-    color: #ffffff !important; /* Đặt màu trắng cho tiêu đề tin tức trong dark mode */
+    color: #0056b3; 
 }
 
-/* Đảm bảo nội dung (p) của tin tức là màu trắng */
+body.dark-mode .object_news_right h2 {
+    color: #ffffff !important; 
+}
+
 .object_news_right p {
     font-size: 0.9em;
-    color: #555; /* Màu mặc định cho chế độ sáng */
+    color: #555; 
     margin-top: 0;
     margin-bottom: 10px;
     line-height: 1.4;
@@ -249,7 +247,7 @@ body.dark-mode .object_news_right h2 {
     -webkit-box-orient: vertical;
 }
 body.dark-mode .object_news_right p {
-    color: #ffffff !important; /* Đặt màu trắng cho nội dung tin tức trong dark mode */
+    color: #ffffff !important; 
 }
 
 .object_news_right .action-links {
@@ -281,18 +279,17 @@ body.dark-mode .object_news_right p {
     background-color: rgba(0, 123, 255, 0.1);
 }
 
-/* Override màu cho link xem thêm */
+
 .object_news_right .action-links a[href*="news_detail.php"] {
-    color: #ff0048c3; /* Giữ nguyên màu hồng/đỏ của bạn */
+    color: #ff0048c3; 
     margin-left: 0;
     padding-left: 0;
 }
 body.dark-mode .object_news_right .action-links a[href*="news_detail.php"] {
-    color: #ff6b91; /* Giữ nguyên màu hồng nhạt của bạn trong dark mode */
+    color: #ff6b91; 
 }
 
 
-/* Điều chỉnh nút Sửa/Xóa cho admin */
 .object_news_right .action-links a.btn {
     padding: 5px 10px;
     font-size: 0.8em;
@@ -301,7 +298,6 @@ body.dark-mode .object_news_right .action-links a[href*="news_detail.php"] {
     margin-bottom: 0;
 }
 
-/* Nút "Thêm tin tức" ở cuối news_frame */
 .news_frame > div:last-child {
     text-align: center;
     margin-top: 20px;
@@ -316,7 +312,7 @@ body.dark-mode .object_news_right .action-links a[href*="news_detail.php"] {
     transition: background-color 0.2s ease;
 }
 body.dark-mode .news_frame > div:last-child a {
-    background-color: #1f7a38; /* Giữ nguyên màu nút Thêm tin tức */
+    background-color: #1f7a38; 
 }
 .news_frame > div:last-child a:hover {
     background-color: #218838;
@@ -324,24 +320,22 @@ body.dark-mode .news_frame > div:last-child a {
 body.dark-mode .news_frame > div:last-child a:hover {
     background-color: #196f2e;
 }
-/* --- CHỈNH SỬA PHẦN TIN TỨC (NEWS) KẾT THÚC --- */
 
-
-.menu { /* Đây là các item bài học trong .container_body_left */
+.menu { 
     width: 95%;
     background-color: #f2f2f2;
     padding: 12px;
     border-radius: 20px;
     border: 1px solid #ccff00;
-    height: 235px; /* Cân nhắc điều chỉnh để phù hợp với nội dung động */
+    height: 235px; 
     margin: 12px;
     display: flex;
 }
 
 body.dark-mode .menu {
-    background-color: #333; /* Giữ nguyên nền item bài học */
-    border-color: #a6a6a6; /* Giữ nguyên border */
-    color: #ffffff; /* Màu chữ trực tiếp cho .menu là màu trắng */
+    background-color: #333; 
+    border-color: #a6a6a6; 
+    color: #ffffff; 
 }
 
 .object_menu_left {
@@ -358,14 +352,14 @@ body.dark-mode .menu {
 }
 
 body.dark-mode .object_menu_left {
-    background-color: #333; /* Giữ nguyên nền ảnh bài học (nếu ảnh có trong suốt) */
-    border-color: #555; /* Giữ nguyên border */
+    background-color: #333; 
+    border-color: #555; 
 }
 
 .img_menu {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Quan trọng: Cắt ảnh để lấp đầy, giữ tỷ lệ khung hình */
+    object-fit: cover; 
     border-radius: 20px;
 }
 
@@ -378,17 +372,16 @@ body.dark-mode .object_menu_left {
 }
 
 body.dark-mode .object_menu_right {
-    background-color: #333; /* Giữ nguyên nền nội dung bài học */
-    border-color: #555; /* Giữ nguyên border */
-    color: #ffffff; /* Màu chữ trực tiếp cho .object_menu_right là màu trắng */
+    background-color: #333; 
+    border-color: #555; 
+    color: #ffffff;
 }
 
 body.dark-mode .object_menu_right h2,
 body.dark-mode .object_menu_right p {
-    color: #ffffff !important; /* Đảm bảo cả h2 và p trong object_menu_right đều màu trắng */
+    color: #ffffff !important; 
 }
 
-/* --- CHỈNH SỬA PHẦN BÀI KIỂM TRA (TEST) BẮT ĐẦU --- */
 .test_frame {
     min-height: 450px;
     background-color: #b2fff1;
@@ -399,21 +392,21 @@ body.dark-mode .object_menu_right p {
 }
 
 body.dark-mode .test_frame {
-    background-color: #2a2a2a; /* Giữ nguyên nền khung bài kiểm tra */
+    background-color: #2a2a2a; 
 }
 
-/* Đảm bảo tiêu đề "Bài kiểm tra" là màu trắng */
+
 .test_frame h1 {
     margin-top: 0;
     margin-bottom: 20px;
     text-align: center;
-    color: #333333; /* Màu mặc định cho chế độ sáng */
+    color: #333333; 
 }
 body.dark-mode .test_frame h1 {
-    color: #ffffff !important; /* Đặt màu trắng cho tiêu đề "Bài kiểm tra" trong dark mode */
+    color: #ffffff !important; 
 }
 
-.object_news { /* Tên class này có thể gây nhầm lẫn vì nó được dùng cho tests, nhưng tôi sẽ giữ theo bạn */
+.object_news { 
     background-color: #f2f2f2;
     padding: 12px;
     margin-bottom: 15px;
@@ -424,8 +417,8 @@ body.dark-mode .test_frame h1 {
 }
 
 body.dark-mode .object_news {
-    background-color: #333; /* Giữ nguyên nền item bài kiểm tra */
-    border-color: #4a4a4a; /* Giữ nguyên border */
+    background-color: #333; 
+    border-color: #4a4a4a; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 .object_news:hover {
@@ -441,17 +434,16 @@ body.dark-mode .object_news:hover {
     font-size: 1.1em;
     margin-top: 0;
     margin-bottom: 5px;
-    color: #0099ff; /* Màu mặc định cho chế độ sáng */
-}
-/* Đảm bảo tiêu đề (h2) của từng bài kiểm tra là màu trắng */
-body.dark-mode .object_news h2 {
-    color: #ffffff !important; /* Đặt màu trắng cho tiêu đề bài kiểm tra trong dark mode */
+    color: #0099ff;
 }
 
-/* Đảm bảo nội dung (p) của bài kiểm tra là màu trắng */
+body.dark-mode .object_news h2 {
+    color: #ffffff !important; 
+}
+
 .object_news p {
     font-size: 0.9em;
-    color: #555; /* Màu mặc định cho chế độ sáng */
+    color: #555; 
     margin-top: 0;
     margin-bottom: 10px;
     line-height: 1.4;
@@ -462,7 +454,7 @@ body.dark-mode .object_news h2 {
     -webkit-box-orient: vertical;
 }
 body.dark-mode .object_news p {
-    color: #ffffff !important; /* Đặt màu trắng cho nội dung bài kiểm tra trong dark mode */
+    color: #ffffff !important; 
 }
 
 .test_frame > div:last-child {
@@ -487,10 +479,6 @@ body.dark-mode .test_frame > div:last-child a {
 body.dark-mode .test_frame > div:last-child a:hover {
     background-color: #196f2e;
 }
-/* --- CHỈNH SỬA PHẦN BÀI KIỂM TRA (TEST) KẾT THÚC --- */
-
-
-/* Dropdown styles */
 .dropdown {
     position: relative;
 }
@@ -508,7 +496,7 @@ body.dark-mode .test_frame > div:last-child a:hover {
 }
 
 body.dark-mode .dropdown-menu {
-    background-color: #1f1f1f; /* Giữ nguyên nền dropdown */
+    background-color: #1f1f1f; 
 }
 
 .dropdown-menu a {
@@ -532,7 +520,6 @@ body.dark-mode .dropdown-menu a {
     display: block;
 }
 
-/* Button styles */
 .btn {
     padding: 8px 16px;
     text-decoration: none;
@@ -546,7 +533,7 @@ body.dark-mode .dropdown-menu a {
 }
 
 body.dark-mode .btn-success {
-    background-color: #1f7a38; /* Giữ nguyên màu nút success */
+    background-color: #1f7a38; 
 }
 
 .btn-warning {
@@ -555,7 +542,7 @@ body.dark-mode .btn-success {
 }
 
 body.dark-mode .btn-warning {
-    background-color: #d39e00; /* Giữ nguyên màu nút warning */
+    background-color: #d39e00;
 }
 
 .btn-danger {
@@ -564,7 +551,7 @@ body.dark-mode .btn-warning {
 }
 
 body.dark-mode .btn-danger {
-    background-color: #a71d2a; /* Giữ nguyên màu nút danger */
+    background-color: #a71d2a; 
 }
 
 .btn-primary {
@@ -573,5 +560,5 @@ body.dark-mode .btn-danger {
 }
 
 body.dark-mode .btn-primary {
-    background-color: #0056b3; /* Giữ nguyên màu nút primary */
+    background-color: #0056b3; 
 }
